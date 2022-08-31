@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".add.AddStoryActivity">
+
+    <ImageView
+        android:id="@+id/add_prev_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="@string/preview"
+        app:layout_constraintBottom_toBottomOf="@id/add_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_image_search_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/add_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <Button
+        android:id="@+id/add_cam_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:backgroundTint="@color/light_grey"
+        android:textColor="@color/black"
+        android:text="@string/camera"
+        app:layout_constraintBottom_toTopOf="@+id/add_file_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_prev_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:backgroundTint="@color/light_grey"
+        android:textColor="@color/black"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_cam_button"
+        app:layout_constraintStart_toEndOf="@+id/add_prev_imageview"
+        app:layout_constraintBottom_toBottomOf="@id/add_guideline"
+        tools:layout_editor_absoluteY="155dp" />
+    <Button
+        android:id="@+id/add_upload_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/upload"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/add_desc_edttxt"
+        app:layout_constraintStart_toStartOf="@+id/add_desc_edttxt"
+        app:layout_constraintTop_toBottomOf="@+id/add_desc_edttxt"
+        app:layout_constraintVertical_bias="0.240" />
+
+    <EditText
+        android:id="@+id/add_desc_edttxt"
+        android:layout_width="340dp"
+        android:layout_height="164dp"
+        android:gravity="top"
+        android:hint="@string/description"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="text|textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_prev_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/add_prev_imageview"
+        app:layout_constraintVertical_bias="0.291" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".main.MainActivity">
+
+    <ImageView
+        android:id="@+id/storydet_user_imageview"
+        android:contentDescription="@string/imageview_for_user_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/detailnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="transendN"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/nama"
+        app:layout_constraintBottom_toBottomOf="@+id/storydet_user_imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toEndOf="@+id/storydet_user_imageview"
+        app:layout_constraintTop_toTopOf="@+id/storydet_user_imageview"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <ImageView
+        android:id="@+id/userdet_story_imageview"
+        android:contentDescription="@string/imageview_for_content_image"
+        android:transitionName="transendF"
+        android:src="@drawable/ic_baseline_image_search_24"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storydet_user_imageview"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <TextView
+        android:id="@+id/userdet_descript_edttext"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/userdet_story_imageview"
+        app:layout_constraintStart_toStartOf="@+id/userdet_story_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/userdet_story_imageview"
+        app:layout_constraintVertical_bias="0.172" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

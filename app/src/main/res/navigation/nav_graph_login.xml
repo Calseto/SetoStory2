@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.e.setostory2.login.LoginFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_FragmentLogin_to_FragmentRegister"
+            app:destination="@id/FragmentRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentRegister"
+        android:name="com.e.setostory2.login.RegisterFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_register">
+    </fragment>
+</navigation>
